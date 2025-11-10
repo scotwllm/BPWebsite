@@ -1,0 +1,277 @@
+/* =====================================
+   Color Variables
+   ===================================== */
+:root {
+  --bg-color: #F0EBCE;
+  --text-color: #3B3B3B;
+  --heading-color: #5E6C76;
+  --accent-color: #C4A1A8;
+  --highlight-color: #8CA9C4;
+  --white: #ffffff;
+}
+html {
+  overflow-y: scroll;
+}
+/* =====================================
+   Base Styles
+   ===================================== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', 'Montserrat', sans-serif;
+  line-height: 1.5; /* slightly tighter line spacing */
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75em 2em; /* tighter vertical padding */
+}
+
+/* =====================================
+   Headings
+   ===================================== */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--heading-color);
+  margin-top: 0.5em;     /* pulled closer to previous section */
+  margin-bottom: 0.15em; /* reduced space below */
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.75em;
+  line-height: 1.25;
+}
+
+/* =====================================
+   Logo
+   ===================================== */
+.logo {
+  width: 160px;
+  max-width: 35vw;
+  height: auto;
+  margin-right: 0.75em;
+}
+.proofsymbols {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 2em auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* =====================================
+   Navigation Layout
+   ===================================== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4em 2em; /* slightly reduced vertical padding */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.main-nav a {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 1.25em; /* tighter spacing between links */
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+}
+
+/* =====================================
+   Main heading block
+   ===================================== */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-top: 0.2em; /* pulls content closer to nav */
+}
+
+/* =====================================
+   Paragraphs & Lists
+   ===================================== */
+/* Paragraph spacing */
+p {
+  margin-top: 0.8em;
+  margin-bottom: 1.2em;
+}
+
+
+ul {
+  margin: 0.4em 0 0.4em 1.25em;
+  padding: 0;
+}
+
+/* =====================================
+   Responsive Adjustments
+   ===================================== */
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75em 1.5em;
+  }
+
+  .main-nav {
+    margin-top: 0.4em;
+  }
+
+  .main-nav a {
+    display: block;
+    margin: 0.3em 0;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.3em;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 0.4em;
+  }
+}
+
+/* =====================================
+   CONTACT PAGE FORM STYLES
+   ===================================== */
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* reduced spacing between fields */
+  max-width: 600px;
+  margin: 0.75rem 0; /* less air above/below the form */
+  align-items: flex-start;
+}
+
+form#contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.1rem; /* almost flush with inputs */
+}
+
+form#contact-form input,
+form#contact-form textarea {
+  width: 100%;
+  padding: 0.55rem; /* tighter input padding */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+form#contact-form input:focus,
+form#contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+form#contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem; /* more compact button */
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+}
+
+form#contact-form button:hover {
+  background-color: #555;
+}
+
+.form-status {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: #333;
+}
+footer p {
+  font-size: 0.85em;      /* slightly smaller than body text */
+  color: #555;            /* softer contrast */
+  text-align: center;     /* keeps it tidy */
+  margin-top: 1em;
+}
+/* Skip to main content link (for keyboard and screen reader users) */
+
+/* Make it visible when focused */
+/* Skip to main content link (for keyboard and screen reader users) */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #3B3B3B;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  transition: top 0.3s ease;
+  font-weight: 600;
+}
+
+/* Make it visible when focused */
+.skip-link:focus {
+  top: 0;
+}
+/* Blog listings */
+.blog-listing {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+}
+
+.blog-listing h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+  font-family: 'Playfair Display', serif;
+  color: var(--heading-color);
+}
+
+.blog-listing a {
+  text-decoration: none;
+  color: var(--heading-color);
+}
+
+.blog-listing a:hover {
+  color: var(--accent-color);
+}
+
+.blog-date {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.blog-listing:last-of-type {
+  border-bottom: none;      /* no line after last article */
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+

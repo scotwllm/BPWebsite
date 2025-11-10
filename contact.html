@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoomerProofreading</title>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoomerProofreading – Where Every Word Matters</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Scott Williams of BoomerProofreading in West Hollywood offers professional proofreading and editing for businesses, students, and professionals across Los Angeles. Clear, correct, confident writing that gets noticed.">
+  <meta name="keywords" content="proofreading, editing, grammar, BoomerProofreading, business writing, academic proofreading, resume proofreading, court transcript proofreading, website editing, Los Angeles, West Hollywood">
+  <meta name="author" content="Scott Williams, BoomerProofreading">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="BoomerProofreading – Where Every Word Matters">
+  <meta property="og:description" content="Professional proofreading and editing by Scott Williams in West Hollywood. Clear, correct, confident writing for businesses and professionals.">
+  <meta property="og:image" content="https://boomerproofreading.com/images/boomer-logo.png">
+  <meta property="og:url" content="https://boomerproofreading.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BoomerProofreading – Where Every Word Matters">
+  <meta name="twitter:description" content="Scott Williams provides professional proofreading and editing from West Hollywood, Los Angeles. Clear, correct, confident writing.">
+  <meta name="twitter:image" content="https://boomerproofreading.com/images/boomer-logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+    <div class="topbar">
+      <a href="index.html">
+        <img src="images/boomer-logo.png" alt="BoomerProofreading logo" class="logo" />
+      </a>
+      <nav class="main-nav">
+        <a href="contact.html" class="active">Contact</a>
+       <!-- <a href="blog.html">Blog</a>-->
+      </nav>
+    </div>
+
+    <div class="container header-flex">
+      <div>
+        <h1>Contact Me</h1>
+        <h2>Because sometimes the fastest way to sound smart is to ask for help.</h2>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <p>If you’re ready to take your writing to the next level—or just have questions about how I can help—use the form below. I’ll get back to you as soon as possible.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/xwpndvjl" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BoomerProofreading. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple Formspree feedback
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+
+      try {
+        const response = await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          status.textContent = "Thanks for reaching out! We'll get back to you soon.";
+          form.reset();
+        } else {
+          status.textContent = "Oops—something went wrong. Please check your info and try again.";
+        }
+      } catch (error) {
+        status.textContent = "Network error. Please try again later.";
+      }
+    });
+  </script>
+</body>
+</html>

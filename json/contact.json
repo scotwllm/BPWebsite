@@ -1,0 +1,41 @@
+{
+  "title": "Contact Us",
+  "form-id": "contact-form",
+  "publish-date": "2025-09-23",
+  "blocks": [
+    {
+      "type": "form",
+      "content": {
+        "method": "POST",
+        "action": "https://formspree.io/f/xwpndvjl",
+        "fields": [
+          {
+            "type": "text",
+            "name": "name",
+            "placeholder": "Your Name",
+            "required": true
+          },
+          {
+            "type": "email",
+            "name": "email",
+            "placeholder": "Your Email",
+            "required": true
+          },
+          {
+            "type": "textarea",
+            "name": "message",
+            "placeholder": "Your Message",
+            "rows": 5,
+            "required": true
+          }
+        ],
+        "submit": {
+          "text": "Send Message",
+          "lockUntilValid": true
+        },
+        "success-message": "Thanks for reaching out! We'll get back to you soon.",
+        "error-message": "Oops—something went wrong. Please check your info and try again."
+      }
+    }
+  ]
+}
