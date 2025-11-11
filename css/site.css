@@ -272,6 +272,46 @@ footer p {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+/* ABOUT PAGE HEADSHOT WRAP */
+.bio-wrap {
+  overflow: hidden;
+}
+
+ .headshot {
+    float: left;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 0 1.5em 1em 0;
+  }
+
+/* Responsive fallback for small screens */
+@media (max-width: 600px) {
+    .headshot {
+      float: none;
+      display: block;
+      margin: 0 auto 1em auto;
+    }
+}
+.headshot-wrap {
+  float: left;
+  margin: 0 1.5em 1em 0;
+  width: 200px;
+  border-radius: 4px;
+  max-width: 40%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .headshot-wrap {
+    float: none;
+    display: block;
+    margin: 0 auto 1em auto;
+    max-width: 80%;
+  }
+}
+
+
 
 
 
