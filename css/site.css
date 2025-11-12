@@ -307,3 +307,7 @@ form#contact-form button:hover {
   overflow: visible;
   margin-left: 1.5em;
 }
+.nobr {
+  white-space: nowrap;
+}
+
