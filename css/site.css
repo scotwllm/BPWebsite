@@ -310,4 +310,36 @@ form#contact-form button:hover {
 .nobr {
   white-space: nowrap;
 }
+.clarity-list {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.clarity-list li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.clarity-list li strong {
+  display: inline-block;
+  font-weight: 600;
+}
+.last-paragraph {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.last-paragraph::after {
+  content: "";
+  display: block;
+  width: 640px;
+  max-width: 90%;
+  height: 1px;
+  margin: 1.75rem auto 0;
+  background-color: #999;
+  opacity: 0.5;
+  border-radius: 1px;
+}
+
 
