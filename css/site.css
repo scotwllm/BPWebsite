@@ -297,6 +297,19 @@ form#contact-form button:hover {
 .bio-wrap p {
   overflow: hidden;
 }
+.container a,
+.bio-wrap a {
+  text-decoration: none;
+  color: var(--heading-color);
+  border-bottom: 1px solid var(--heading-color);
+  padding-bottom: 2px; /* prevents descenders like g, y, p from touching the line */
+}
+
+.container a:hover,
+.bio-wrap a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
 
 /* =====================================
    List Restoration Fix
@@ -384,6 +397,7 @@ form#contact-form button:hover {
     flex-direction: column;
     gap: 1rem;
   }
+
 }
 
 
