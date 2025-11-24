@@ -232,10 +232,7 @@ form#contact-form button:hover {
   font-weight: 600;
   color: #333;
 }
-.video-container {
-  max-width: 650px;
-  margin: 2rem auto;
-}
+
 
 .video-container video {
   display: block;
@@ -244,7 +241,10 @@ form#contact-form button:hover {
   aspect-ratio: 1280 / 1656; /* EXACT ratio */
   object-fit: contain;
 }
-
+.video-container {
+  max-width: 650px;
+  margin: 2rem auto;
+}
 
 
 
