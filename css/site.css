@@ -232,6 +232,26 @@ form#contact-form button:hover {
   font-weight: 600;
   color: #333;
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 2rem auto;
+  padding-bottom: 129.4%; /* exact portrait ratio for 1280x1656 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* =====================================
    Responsive Adjustments
